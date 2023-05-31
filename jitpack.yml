@@ -1,2 +1,6 @@
 jdk:
   - openjdk17
+before_install:
+  - mv build.gradle temp.gradle
+  - gradle wrapper --gradle-version 8.1 --no-daemon --stacktrace
+  - mv temp.gradle build.gradle
